@@ -3456,6 +3456,20 @@ input, select, textarea {
 
 /* Banner */
 
+	#banner-overlay {
+		opacity: .4;
+		background-color: #344856;
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
 	#banner {
 		background-attachment: fixed;
 		background-color: #272833;
@@ -3490,10 +3504,10 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
+			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+			background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
 			background-repeat: no-repeat;
 			background-size: cover;
 			content: '';
@@ -3507,19 +3521,19 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 			#banner:after {
-				background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
+				background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
 			}
 		}
 	
 		@media screen and (max-width: 480px) {
 			#banner:after {
-				background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
-				background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.gif");
+				background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
+				background-image: linear-gradient(top, rgba(23, 24, 32, 0), rgba(23, 24, 32, 0)), url("../../images/home.jpg");
 			}
 		}
 
@@ -4219,8 +4233,44 @@ input, select, textarea {
 		pointer-events: none;
 	}
 
+	.safari .all-banners {
+		display: none;
+	}
+
+	.safari .safari-banner {
+		display: block !important;
+	}
+
+	.safari .safari-banner .content {
+		padding-top: 150px !important;
+	}
+
+	@media screen and (max-width: 480px) {
+		.safari-banner .content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-right: 0px !important;
+			max-width: none;
+			min-width: 0px;
+			padding-top: 100px;
+		}
+		.safari-banner .content .title-the-future {
+			font-size: 40px !important;
+			text-align: center;
+		}
+		.safari-banner .content .title-we-are {
+			text-align: center;
+		}
+		.safari-banner .content .sub-title {
+			text-align: center;
+		}
+		.safari-banner .content .link-our-firm-container {
+			justify-content: center;
+		}
+	}
 	
-	.banner .content {
+	.content {
 		display: inline-block;
 		margin-right: 15%;
 		max-width: 95%;
@@ -4234,14 +4284,14 @@ input, select, textarea {
 		z-index: 1;
 	}
 
-	.banner .content .title-we-are {
+	.content .title-we-are {
 		color: #92c746;
 		font-size: 50px;
 		margin: 0 0 20px 0;
 		font-weight: 600;
 	}
 
-	.banner .content .title-the-future {
+	.content .title-the-future {
 		color: white;
 		font-size: 60px;
 		font-weight: 700;
@@ -4252,25 +4302,25 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 480px) {
-		.banner .content {
+		.all-banners .content {
 			padding-left: 150px;
 		}
-		.banner .content .title-the-future {
+		.all-banners .content .title-the-future {
 			font-size: 40px !important;
 			text-align: center;
 		}
-		.banner .content .title-we-are {
+		.all-banners .content .title-we-are {
 			text-align: center;
 		}
-		.banner .content .sub-title {
+		.all-banners .content .sub-title {
 			text-align: center;
 		}
-		.banner .content .link-our-firm-container {
+		.all-banners .content .link-our-firm-container {
 			justify-content: center;
 		}
 	}
 
-	.banner .content .sub-title {
+	.content .sub-title {
 		font-size: 20px;
 		margin: 0 0 10px 0;
 		font-weight: 600;	
@@ -4280,7 +4330,7 @@ input, select, textarea {
 		display: flex;
 	}
 
-	.banner .content .link-our-firm {
+	.content .link-our-firm {
 		color: #92c746;
 		font-weight: 700;
 		font-size: 20px;
@@ -4289,22 +4339,22 @@ input, select, textarea {
 		margin-right: 10px;
 	}
 
-		.banner .content header {
+		.content header {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
-			.banner .content header h2 {
+			.content header h2 {
 				font-size: 2.5em;
 				margin: 0;
 			}
 
-			.banner .content header p {
+			.content header p {
 				margin: 0.5em 0 0 0;
 				top: 0;
 			}
 
-		.banner .content .image {
+		.content .image {
 			border-radius: 100%;
 			display: inline-block;
 			height: 18em;
@@ -4313,7 +4363,7 @@ input, select, textarea {
 			width: 18em;
 		}
 
-			.banner .content .image img {
+			.content .image img {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
