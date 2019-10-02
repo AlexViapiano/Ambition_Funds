@@ -4224,7 +4224,7 @@ input, select, textarea {
 		display: inline-block;
 		margin-right: 15%;
 		max-width: 95%;
-		min-width: 575px;
+		min-width: 615px;
 		height: 70%;
 		padding-top: 0px;
 		padding: 6em;
@@ -4257,6 +4257,16 @@ input, select, textarea {
 		}
 		.banner .content .title-the-future {
 			font-size: 40px !important;
+			text-align: center;
+		}
+		.banner .content .title-we-are {
+			text-align: center;
+		}
+		.banner .content .sub-title {
+			text-align: center;
+		}
+		.banner .content .link-our-firm-container {
+			justify-content: center;
 		}
 	}
 
@@ -4264,6 +4274,10 @@ input, select, textarea {
 		font-size: 20px;
 		margin: 0 0 10px 0;
 		font-weight: 600;	
+	}
+
+	.link-our-firm-container {
+		display: flex;
 	}
 
 	.banner .content .link-our-firm {
