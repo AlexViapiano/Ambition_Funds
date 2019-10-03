@@ -4668,6 +4668,7 @@ input, select, textarea {
 
 	.banner-image-container  .banner-image {
 		max-width: 970px;
+		height: auto;
 	}
 
 	.text-area-title {
