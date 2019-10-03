@@ -3457,7 +3457,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner-overlay {
-		opacity: .4;
+		opacity: .5;
 		background-color: #344856;
 		display: block;
 		height: 100%;
@@ -4205,6 +4205,55 @@ input, select, textarea {
 
 	a { border: none!important; } 
 
+	.safari .all-banners {
+		display: none;
+	}
+
+	.safari .safari-banner {
+		display: block !important;
+	}
+
+	.safari .safari-banner .content {
+		padding-top: 20% !important;
+		display: inline-block;
+		margin-right: 15%;
+		max-width: 95%;
+		min-width: 632px;
+		height: 70%;
+		padding-top: 0px;
+		padding: 6em;
+		position: relative;
+		text-align: left !important;
+		vertical-align: middle;
+		z-index: 1;
+	}
+
+	@media screen and (max-width: 480px) {
+		.safari-banner #banner-overlay {
+			display: flex;
+			justify-content: center;
+		}
+
+		.safari-banner .content {
+			margin-left: 0px;
+		}
+
+		.safari-banner .title-the-future {
+			font-size: 40px !important;
+			text-align: center;
+		}
+		.safari-banner .title-we-are {
+			text-align: center;
+		}
+		.safari-banner .sub-title {
+			text-align: center;
+			font-size: 16px;
+		}
+		.safari-banner .link-our-firm-container {
+			justify-content: center;
+		}
+	}
+
 	.overlay {
 		overflow: hidden;
 		display: flex;
@@ -4232,45 +4281,8 @@ input, select, textarea {
 		height: 100%;
 		pointer-events: none;
 	}
-
-	.safari .all-banners {
-		display: none;
-	}
-
-	.safari .safari-banner {
-		display: block !important;
-	}
-
-	.safari .safari-banner .content {
-		padding-top: 150px !important;
-	}
-
-	@media screen and (max-width: 480px) {
-		.safari-banner .content {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			margin-right: 0px !important;
-			max-width: none;
-			min-width: 0px;
-			padding-top: 100px;
-		}
-		.safari-banner .content .title-the-future {
-			font-size: 40px !important;
-			text-align: center;
-		}
-		.safari-banner .content .title-we-are {
-			text-align: center;
-		}
-		.safari-banner .content .sub-title {
-			text-align: center;
-		}
-		.safari-banner .content .link-our-firm-container {
-			justify-content: center;
-		}
-	}
 	
-	.content {
+	.banner .content {
 		display: inline-block;
 		margin-right: 15%;
 		max-width: 95%;
@@ -4284,14 +4296,14 @@ input, select, textarea {
 		z-index: 1;
 	}
 
-	.content .title-we-are {
+	.title-we-are {
 		color: #92c746;
 		font-size: 50px;
 		margin: 0 0 20px 0;
 		font-weight: 600;
 	}
 
-	.content .title-the-future {
+	.title-the-future {
 		color: white;
 		font-size: 60px;
 		font-weight: 700;
@@ -4305,22 +4317,22 @@ input, select, textarea {
 		.all-banners .content {
 			padding-left: 150px;
 		}
-		.all-banners .content .title-the-future {
+		.all-banners .title-the-future {
 			font-size: 40px !important;
 			text-align: center;
 		}
-		.all-banners .content .title-we-are {
+		.all-banners .title-we-are {
 			text-align: center;
 		}
-		.all-banners .content .sub-title {
+		.all-banners .sub-title {
 			text-align: center;
 		}
-		.all-banners .content .link-our-firm-container {
+		.all-banners .link-our-firm-container {
 			justify-content: center;
 		}
 	}
 
-	.content .sub-title {
+	.sub-title {
 		font-size: 20px;
 		margin: 0 0 10px 0;
 		font-weight: 600;	
@@ -4330,7 +4342,7 @@ input, select, textarea {
 		display: flex;
 	}
 
-	.content .link-our-firm {
+	.link-our-firm {
 		color: #92c746;
 		font-weight: 700;
 		font-size: 20px;
@@ -4339,22 +4351,22 @@ input, select, textarea {
 		margin-right: 10px;
 	}
 
-		.content header {
+		.banner .content header {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
-			.content header h2 {
+			.banner .content header h2 {
 				font-size: 2.5em;
 				margin: 0;
 			}
 
-			.content header p {
+			.banner .content header p {
 				margin: 0.5em 0 0 0;
 				top: 0;
 			}
 
-		.content .image {
+			.banner .content .image {
 			border-radius: 100%;
 			display: inline-block;
 			height: 18em;
@@ -4363,7 +4375,7 @@ input, select, textarea {
 			width: 18em;
 		}
 
-			.content .image img {
+			.banner .content .image img {
 				border-radius: 100%;
 				display: block;
 				width: 100%;
@@ -4480,7 +4492,6 @@ input, select, textarea {
 	.home-box .split-text-right {
 		width: 100%; 
 		height: 100%; 
-		margin-left: 30px;
 		padding-top: 15px; 
 		padding-right: 45px; 
 		border-bottom: 1px solid #e5e5e5
