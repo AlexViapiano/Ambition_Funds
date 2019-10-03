@@ -4612,7 +4612,18 @@ input, select, textarea {
 			border: none;
 			flex-direction: column;
 		}
+		.page-not-selected {
+			border-bottom: 2px solid #999 !important;
+			opacity: 0.5;
+		}
 	}
+
+	@media screen and (max-width: 650px) {
+		.page-about-text {
+			padding-bottom: 30px;
+		}
+	}
+
 
 	.page-selector-container .page-selector {
 		color: #999;
@@ -4647,6 +4658,10 @@ input, select, textarea {
 	@media screen and (max-width: 560px) {
 		.team-bio-container {
 			flex-direction: column;
+		}
+
+		.team-bio-text {
+			margin-left: 0px !important; 
 		}
 	}
 
