@@ -71,7 +71,7 @@
 				<div id="banner-overlay"><div>	
 				<div class="content">
 					<p class="title-we-are">We are</p>
-					<p id="word" class="title-the-future">THE FUTURE.</p>
+					<p id="word-safari" class="title-the-future">THE FUTURE.</p>
 					<p class="sub-title"> Answering Growing Needs of Private Investors</p>
 					<a href="about.html" class="link-our-firm-container">
 						<span class="link-our-firm">Our Firm</span>
@@ -215,6 +215,9 @@
 						setInterval(function () {
 						count++;
 						$("#word").fadeOut(600, function () {
+							$(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+						});
+						$("#word-safari").fadeOut(600, function () {
 							$(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
 						});
 						}, 3300);
