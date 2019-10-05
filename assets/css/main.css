@@ -4836,6 +4836,15 @@ input, select, textarea {
 		}
 	}
 
+	.contact-box {
+		margin-left: 75px;
+	}
+
+	@media screen and (max-width: 980px) {
+		.contact-box {
+			margin-left: 0px;
+		}
+	}
 
 	.contact-list {
 		display: flex;
