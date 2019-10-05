@@ -4743,10 +4743,10 @@ input, select, textarea {
 	}
 
 	.page-split-text {
-		line-height: 1.2;
+		line-height: 1.3;
 		color: #344856;
 		font-weight: 500;
-		font-size: 15px;
+		font-size: 16px;
 		padding-left: 5px;
 	}
 	
@@ -4765,16 +4765,32 @@ input, select, textarea {
 	}
 
 	.team-bio-text {
-		color: #000; 
 		margin-left: 30px;
 		padding-top: 5px;
 		padding-bottom: 20px;	
 		border-bottom: 1px solid #999;
+
+		line-height: 1.3;
+		color: #344856;
+		font-weight: 500;
+		font-size: 16px;
+	}
+
+	.container-page {
+		max-width: 850px;
 	}
 
 	.banner-image-container {
 		margin-bottom: 30px;
 		padding-top: 20px;
+	}
+
+	.container-text {
+		line-height: 1.3;
+		color: #344856;
+		font-weight: 500;
+		font-size: 16px;
+		padding-bottom: 15px;
 	}
 
 	@media screen and (min-width: 980px) {
@@ -4786,7 +4802,6 @@ input, select, textarea {
 	}
 
 	.banner-image-container  .banner-image {
-		max-width: 980px;
 		height: auto;
 		width: 100%;
 	}
@@ -4856,7 +4871,7 @@ input, select, textarea {
 		}
 
 		.contact-list .copyright-column li:first-child {
-			font-weight: 700;
+			font-weight: 850;
 		}
 
 		.contact-list .copyright-column a {
