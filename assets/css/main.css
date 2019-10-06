@@ -2463,7 +2463,7 @@ input, select, textarea {
 				color: #1c1d26 !important;
 				text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff, 0 1px 0 #ffffff, 0 -1px 0 #ffffff;
 			    border-radius: 25px;
-				padding: 3px;
+				padding: 5px;
 				border: 1px solid #999;
 			}
 
@@ -3573,13 +3573,12 @@ input, select, textarea {
 	#banner-overlay {
 		opacity: .5;
 		background-color: #344856;
-		display: block;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
 		height: 100%;
-		left: 0;
 		position: absolute;
 		top: 0;
-		right: 0;
-		bottom: 0;
 		width: 100%;
 		z-index: 1;
 	}
@@ -3714,9 +3713,17 @@ input, select, textarea {
 				#footer .copyright-column {
 					display: flex;
 					margin-top: 8px;
+					margin-right: 10px;
 					flex-direction: column;
 					text-align: left;
 					margin-bottom: 0px;
+					line-height: 1.5;
+					border-left: #999 solid 1px;
+				}
+
+				.first-address {
+					border: none !important;
+					padding: 0px !important;
 				}
 
 				#footer .copyright-column li:first-child {
@@ -3725,8 +3732,16 @@ input, select, textarea {
 				}
 
 				#footer .copyright li a {
-					color: inherit;
+					color: #FFF;
 					text-align: center;
+				}
+
+				@media screen and (max-width: 737px) {
+					#footer .copyright-column {
+						border: none !important;
+						padding: 0px !important;
+						min-width: 219px;
+					}
 				}
 
 /* XLarge */
@@ -3776,12 +3791,6 @@ input, select, textarea {
 
 			.dropotron.level-0 {
 				font-size: 1em;
-			}
-
-		/* Banner */
-
-			#banner .content {
-				padding: 4.5em;
 			}
 
 		/* Footer */
@@ -3862,11 +3871,6 @@ input, select, textarea {
 
 				#banner .goto-next {
 					height: 7em;
-				}
-
-				#banner .content {
-					padding: 9em 0;
-					text-align: center;
 				}
 
 					#banner .content header {
@@ -3988,7 +3992,7 @@ input, select, textarea {
 				}
 
 				#banner .content {
-					padding: 4.0625em 1.5em 4.875em 1.5em;
+					position: relative;
 				}
 
 					#banner .content header h2 {
@@ -4234,9 +4238,9 @@ input, select, textarea {
 
 		/* Banner */
 
-			#banner .content {
+			/* #banner .content {
 				padding: 3em 1.5625em 5.25em 1.5625em;
-			}
+			} */
 
 		/* Footer */
 
@@ -4326,7 +4330,7 @@ input, select, textarea {
 	}
 
 	.safari .safari-banner .content {
-		padding-top: 20% !important;
+		/* padding-top: 20% !important;
 		display: inline-block;
 		margin-right: 15%;
 		max-width: 95%;
@@ -4337,6 +4341,15 @@ input, select, textarea {
 		position: relative;
 		text-align: left !important;
 		vertical-align: middle;
+		z-index: 1; */
+		display: inline-block;
+		margin-right: 15%;
+		max-width: 95%;
+		min-width: 615px;
+		position: absolute;
+		left: 13%;
+		text-align: left !important;
+		vertical-align: middle;
 		z-index: 1;
 	}
 
@@ -4345,24 +4358,15 @@ input, select, textarea {
 			display: flex;
 			justify-content: center;
 		}
-
 		.safari-banner .content {
 			margin-left: 0px;
+			min-width: 380px !important;
 		}
-
 		.safari-banner .title-the-future {
 			font-size: 40px !important;
-			text-align: center;
-		}
-		.safari-banner .title-we-are {
-			text-align: center;
 		}
 		.safari-banner .sub-title {
-			text-align: center;
 			font-size: 16px;
-		}
-		.safari-banner .link-our-firm-container {
-			justify-content: center;
 		}
 	}
 
@@ -4399,10 +4403,8 @@ input, select, textarea {
 		margin-right: 15%;
 		max-width: 95%;
 		min-width: 615px;
-		height: 70%;
-		padding-top: 0px;
-		padding: 6em;
-		position: relative;
+		position: absolute;
+		left: 13%;
 		text-align: left !important;
 		vertical-align: middle;
 		z-index: 1;
@@ -4427,20 +4429,13 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px) {
 		.all-banners .content {
-			padding-left: 150px;
+			position: relative;
+			margin-right: 0px;
+			min-width: 0px;
+			left: 0px;
 		}
 		.all-banners .title-the-future {
 			font-size: 40px !important;
-			text-align: center;
-		}
-		.all-banners .title-we-are {
-			text-align: center;
-		}
-		.all-banners .sub-title {
-			text-align: center;
-		}
-		.all-banners .link-our-firm-container {
-			justify-content: center;
 		}
 	}
 
@@ -4688,9 +4683,12 @@ input, select, textarea {
 	}
 
 	.page-sub-text {
-		color: #999;
 		border-bottom: solid 1px #d0d0d0;
 		margin-bottom: 50px;
+		line-height: 1.3;
+		color: #344856;
+		font-weight: 500;
+		font-size: 16px;
 		padding-bottom: 15px;
 		text-align: center;
 	}
