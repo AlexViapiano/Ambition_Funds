@@ -4799,6 +4799,7 @@ input, select, textarea {
 
 	.banner-image-container  .banner-image {
 		height: auto;
+		max-height: 270px;
 		width: 100%;
 	}
 
