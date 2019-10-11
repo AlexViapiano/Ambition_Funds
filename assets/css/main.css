@@ -4321,9 +4321,9 @@ input, select, textarea {
 
 	a { border: none!important; } 
 
-	.safari .all-banners {
+	/* .safari .all-banners {
 		display: none;
-	}
+	} */
 
 	.safari .safari-banner {
 		display: block !important;
