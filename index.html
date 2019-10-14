@@ -50,14 +50,21 @@
 				</div>
 			</header>
 
-			<div class="banner all-banners">
+			<div class="banner">
 				<div class="overlay">
-					<img class="banner-background" src="images/home.jpg"/>
-					<!-- <video class="banner-background" muted loop autoplay playsinline preload="yes" controls="true" width='100%' height='100%' id="myVideo">
-						<source src="home.webm" type="video/webm" />
-						<source src="home.mp4" type="video/mp4">
-						<source src="home.ogg" type="video/ogg">
-					</video> -->
+
+					<span class="picture-banner" style="display: none;">
+						<img class="banner-background" src="images/home.jpg"/>
+					</span>
+
+					<span class="video-banner">
+						<video class="banner-background" muted loop autoplay playsinline preload="yes" controls="true" width='100%' height='100%' id="myVideo">
+							<source src="home.webm" type="video/webm" />
+							<source src="home.mp4" type="video/mp4">
+							<source src="home.ogg" type="video/ogg">
+						</video>
+					</span>
+
 				</div>
 				<div class="content">
 					<p class="title-we-are">We offer</p>
@@ -70,22 +77,6 @@
 				</div>
 				<a href="#one" class="goto-next scrolly displayDesktop">Next</a>
 			</div>
-
-			<!-- <section id="banner" class="safari-banner" style="display: none;">
-				<div class="overlay">
-					<img class="banner-background" src="images/home.jpg"/>
-				</div>
-				<div class="content">
-					<p class="title-we-are">We offer</p>
-					<p id="word" class="title-the-future">THE FUTURE.</p>
-					<p class="sub-title"> Answering Growing Needs of Private Investors</p>
-					<a href="about.html" class="link-our-firm-container">
-						<span class="link-our-firm">Our Firm</span>
-						<img style="height: 35px; width: auto;" src="images/arrow-light.jpg"/>
-					</a>
-				</div>
-				<a href="#one" class="goto-next scrolly displayDesktop">Next</a>
-			</section> -->
 
 			<!-- Body -->
 			<section id="one" class="style1 bottom">
@@ -223,20 +214,17 @@
 						$("#word").fadeOut(600, function () {
 							$(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
 						});
-						// $("#word-safari").fadeOut(600, function () {
-						// 	$(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
-						// });
 						}, 3300);
 					});
 				});
 			</script>
 
-			<!-- <script>
+			<script>
 				Detectizr.detect({detectScreen: true});
 				if (Detectizr.browser.name == 'safari') {
 					$('body').toggleClass('safari', true)
 				}
-			</script> -->
+			</script>
 
 	</body>
 </html>

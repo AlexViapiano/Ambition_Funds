@@ -4321,52 +4321,20 @@ input, select, textarea {
 
 	a { border: none!important; } 
 
-	/* .safari .all-banners {
-		display: none;
-	} */
-
-	.safari .safari-banner {
+	.safari .picture-banner {
 		display: block !important;
 	}
 
-	.safari .safari-banner .content {
-		/* padding-top: 20% !important;
-		display: inline-block;
-		margin-right: 15%;
-		max-width: 95%;
-		min-width: 632px;
-		height: 70%;
-		padding-top: 0px;
-		padding: 6em;
-		position: relative;
-		text-align: left !important;
-		vertical-align: middle;
-		z-index: 1; */
-		display: inline-block;
-		margin-right: 15%;
-		max-width: 95%;
-		min-width: 615px;
-		position: absolute;
-		left: 13%;
-		text-align: left !important;
-		vertical-align: middle;
-		z-index: 1;
+	.safari .video-banner {
+		display: none !important;
 	}
 
-	@media screen and (max-width: 480px) {
-		.safari-banner #banner-overlay {
-			display: flex;
-			justify-content: center;
+	@media screen and (max-width: 980px) {
+		.video-banner {
+			display: none !important;
 		}
-		.safari-banner .content {
-			margin-left: 0px;
-			min-width: 380px !important;
-		}
-		.safari-banner .title-the-future {
-			font-size: 40px !important;
-		}
-		.safari-banner .sub-title {
-			font-size: 16px;
+		.picture-banner {
+			display: block !important;
 		}
 	}
 
@@ -4428,13 +4396,13 @@ input, select, textarea {
 	}
 
 	@media screen and (max-width: 480px) {
-		.all-banners .content {
+		.content {
 			position: relative;
 			margin-right: 0px;
 			min-width: 0px;
 			left: 0px;
 		}
-		.all-banners .title-the-future {
+		.title-the-future {
 			font-size: 40px !important;
 		}
 	}
