@@ -208,7 +208,13 @@
 			    $(document).ready(function() {
 					$(function () {
 						count = 0;
-						wordsArray = ["COMMITMENT.", "CONFIDENCE.", "YIELD.", "OUTLOOK."];  
+						// wordsArray = ["COMMITMENT.", "CONFIDENCE.", "YIELD.", "OUTLOOK."]; 
+						wordsArray = ["COMMITMENT."];  
+						Detectizr.detect({detectScreen: true});
+						wordsArray.unshift("Browser: " + Detectizr.browser.name);
+						wordsArray.unshift("Model: " + Detectizr.device.model);
+						wordsArray.unshift("Type: " + Detectizr.device.type);
+						wordsArray.unshift("OS: " + Detectizr.os.name);
 						setInterval(function () {
 						count++;
 						$("#word").fadeOut(600, function () {
