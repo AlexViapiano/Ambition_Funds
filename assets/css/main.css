@@ -4341,6 +4341,7 @@ input, select, textarea {
 	@media screen and (max-width: 530px) {
 		.banner .content {
 			left: 2% !important;
+			min-width: 0px !important;
 		}
 		.sub-title {
 			font-size: 17px !important;
