@@ -4341,7 +4341,6 @@ input, select, textarea {
 	@media screen and (max-width: 530px) {
 		.banner .content {
 			left: 2% !important;
-			min-width: 0px !important;
 		}
 		.sub-title {
 			font-size: 17px !important;
@@ -4380,7 +4379,6 @@ input, select, textarea {
 		display: inline-block;
 		margin-right: 15%;
 		max-width: 95%;
-		min-width: 615px;
 		position: absolute;
 		left: 13%;
 		text-align: left !important;
