@@ -4329,12 +4329,21 @@ input, select, textarea {
 		display: none !important;
 	}
 
-	@media screen and (max-width: 980px) {
+	/* @media screen and (max-width: 980px) {
 		.video-banner {
 			display: none !important;
 		}
 		.picture-banner {
 			display: block !important;
+		}
+	} */
+
+	@media screen and (max-width: 530px) {
+		.banner .content {
+			left: 2% !important;
+		}
+		.sub-title {
+			font-size: 17px !important;
 		}
 	}
 

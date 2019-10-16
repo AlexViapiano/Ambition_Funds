@@ -11,8 +11,8 @@
 		<meta charset="utf-8" />
 		<!-- <link rel="stylesheet" href="odometer-master/themes/odometer-theme-car.css" /> -->
 		<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css?v=2" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+		<link rel="stylesheet" href="assets/css/main.css?v=3" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<!-- Global site tag (gtag.js) - Google Ads: 755882068 -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-755882068"></script>
@@ -163,7 +163,8 @@
 							<li>414 - 1450 Boulevard Rene Leveque O</li>
 							<li>Montreal, Quebec, Canada</li>
 							<li>H3G 0E1</li>
-							<li>Telephone: <a href="tel:+15142446482">514-244-6482</a></li>
+							<li>Telephone: <a href="tel:+15142446482">(514) 244-6482</a></li>
+							<li>Toll Free: <a href="tel:+18552079608">1 (855) 207-9608</a></li>
 						</ul>
 					</li>
 					<li>
@@ -172,7 +173,8 @@
 							<li>700 - 1680 Michigan Avenue</li>
 							<li>Miami, Florida, USA</li>
 							<li>33139</li>
-							<li>Telephone: <a href="tel:+15142446482">514-244-6482</a></li>
+							<li>Telephone: <a href="tel:+17867667393">(786) 766-7393</a></li>
+							<li>Toll Free: <a href="tel:+18552079608">1 (855) 207-9608</a></li>
 						</ul>
 					</li>						
 					<li>
@@ -181,10 +183,10 @@
 							<li>2073 - 954 Lexington Avenue</li>
 							<li>New York, New York, USA</li>
 							<li>10021</li>
-							<li>Telephone: <a href="tel:+15142446482">514-244-6482</a></li>
+							<li>Telephone: <a href="tel:+17867667393">(786) 766-7393</a></li>
+							<li>Toll Free: <a href="tel:+18552079608">1 (855) 207-9608</a></li>
 						</ul>
 					</li>
-
 				</ul>
 				<a href="https://www.linkedin.com/company/ambition-funds/about/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a>
 				<br>
@@ -208,13 +210,7 @@
 			    $(document).ready(function() {
 					$(function () {
 						count = 0;
-						// wordsArray = ["COMMITMENT.", "CONFIDENCE.", "YIELD.", "OUTLOOK."]; 
-						wordsArray = ["COMMITMENT."];  
-						Detectizr.detect({detectScreen: true});
-						wordsArray.unshift("Browser: " + Detectizr.browser.name);
-						wordsArray.unshift("Model: " + Detectizr.device.model);
-						wordsArray.unshift("Type: " + Detectizr.device.type);
-						wordsArray.unshift("OS: " + Detectizr.os.name);
+						wordsArray = ["COMMITMENT.", "CONFIDENCE.", "YIELD.", "OUTLOOK."]; 
 						setInterval(function () {
 						count++;
 						$("#word").fadeOut(600, function () {
@@ -227,8 +223,8 @@
 
 			<script>
 				Detectizr.detect({detectScreen: true});
-				if (Detectizr.browser.name == 'safari') {
-					$('body').toggleClass('safari', true)
+				if (Detectizr.browser.name == 'safari' || Detectizr.device.type == 'mobile' || Detectizr.os.name == 'ios' || Detectizr.device.model == 'iphone' || Detectizr.device.model == 'android') {
+					$('body').toggleClass('safari', true);
 				}
 			</script>
 
